@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="420.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.proje.UrunEkleController">
+   <children>
+      <VBox layoutX="35.0" layoutY="25.0" prefWidth="350.0" spacing="15.0">
+         <children>
+            <Label text="Yeni Ürün Ekleme" textFill="#2c3e50">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            
+            <VBox spacing="5.0">
+               <children>
+                  <Label text="Ürün Adı" style="-fx-font-weight: bold;" textFill="#34495e" />
+                  <TextField fx:id="txtUrunAdi" prefHeight="35.0" promptText="Ürün ismini giriniz" style="-fx-background-radius: 8; -fx-border-color: #dcdde1; -fx-border-radius: 8;" />
+               </children>
+            </VBox>
+
+            <VBox spacing="5.0">
+               <children>
+                  <Label text="Kategori" style="-fx-font-weight: bold;" textFill="#34495e" />
+                  <TextField fx:id="txtKategori" prefHeight="35.0" promptText="Örn: İlaç, Mama, Aksesuar" style="-fx-background-radius: 8; -fx-border-color: #dcdde1; -fx-border-radius: 8;" />
+               </children>
+            </VBox>
+
+            <HBox spacing="15.0">
+               <children>
+                  <VBox prefWidth="167.5" spacing="5.0">
+                     <children>
+                        <Label text="Stok Miktarı" style="-fx-font-weight: bold;" textFill="#34495e" />
+                        <TextField fx:id="txtStok" prefHeight="35.0" promptText="0" style="-fx-background-radius: 8; -fx-border-color: #dcdde1; -fx-border-radius: 8;" />
+                     </children>
+                  </VBox>
+                  <VBox prefWidth="167.5" spacing="5.0">
+                     <children>
+                        <Label text="Birim Fiyat (TL)" style="-fx-font-weight: bold;" textFill="#34495e" />
+                        <TextField fx:id="txtFiyat" prefHeight="35.0" promptText="0.00" style="-fx-background-radius: 8; -fx-border-color: #dcdde1; -fx-border-radius: 8;" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+
+            <VBox spacing="5.0">
+               <children>
+                  <Label text="Ürün Sahibi / Tedarikçi" style="-fx-font-weight: bold;" textFill="#34495e" />
+                  <TextField fx:id="txtSahip" prefHeight="35.0" promptText="Firma veya şahıs adı" style="-fx-background-radius: 8; -fx-border-color: #dcdde1; -fx-border-radius: 8;" />
+               </children>
+            </VBox>
+
+            <HBox alignment="CENTER_RIGHT" prefHeight="80.0" spacing="12.0">
+               <children>
+                  <Button onAction="#handleIptal" prefHeight="45.0" prefWidth="110.0" style="-fx-background-color: #ecf0f1; -fx-text-fill: #2c3e50; -fx-font-weight: bold; -fx-background-radius: 8;" text="İptal" />
+                  <Button onAction="#handleKaydet" prefHeight="45.0" prefWidth="140.0" style="-fx-background-color: #27ae60; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 8;" text="Ürünü Kaydet" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

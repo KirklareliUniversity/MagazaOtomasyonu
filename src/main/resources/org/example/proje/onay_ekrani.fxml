@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="350.0" prefWidth="380.0" style="-fx-background-color: #f8f9fa;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.proje.OnayController">
+   <children>
+      <VBox alignment="CENTER" layoutX="40.0" layoutY="30.0" prefWidth="300.0" spacing="25.0">
+         <children>
+            <VBox alignment="CENTER" spacing="5.0">
+               <children>
+                  <Label text="YETKİLİ ONAYI" textFill="#2c3e50">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label text="Kritik işlem için doğrulama gerekli" textFill="#7f8c8d" />
+               </children>
+            </VBox>
+
+            <VBox spacing="15.0">
+               <children>
+                  <VBox spacing="5.0">
+                     <children>
+                        <Label text="E-posta Adresi" style="-fx-font-weight: bold;" textFill="#34495e" />
+                        <TextField fx:id="txtOnayEmail" prefHeight="40.0" promptText="admin@mail.com" style="-fx-background-radius: 10; -fx-border-color: #dcdde1; -fx-border-radius: 10;" />
+                     </children>
+                  </VBox>
+                  
+                  <VBox spacing="5.0">
+                     <children>
+                        <Label text="Güvenlik Şifresi" style="-fx-font-weight: bold;" textFill="#34495e" />
+                        <PasswordField fx:id="txtOnaySifre" prefHeight="40.0" promptText="••••••••" style="-fx-background-radius: 10; -fx-border-color: #dcdde1; -fx-border-radius: 10;" />
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+
+            <Button mnemonicParsing="false" onAction="#handleOnaylama" prefHeight="45.0" prefWidth="300.0" style="-fx-background-color: #27ae60; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10; -fx-cursor: hand;" text="YETKİ VER VE DEVAM ET">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

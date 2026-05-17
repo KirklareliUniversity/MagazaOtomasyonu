@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="350.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.proje.LoginController">
+   <children>
+      <VBox alignment="CENTER" layoutX="40.0" layoutY="30.0" prefWidth="270.0" spacing="20.0">
+         <children>
+            <VBox alignment="CENTER" spacing="5.0">
+               <children>
+                  <Label text="MAĞAZA OTOMASYONU" textFill="#2c3e50">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label text="Lütfen Giriş Yapın" textFill="#7f8c8d" />
+               </children>
+            </VBox>
+
+            <VBox spacing="10.0">
+               <children>
+                  <Label text="E-posta" style="-fx-font-weight: bold;" textFill="#34495e" />
+                  <TextField fx:id="txtEmail" prefHeight="40.0" promptText="admin@magaza.com" style="-fx-background-radius: 10; -fx-border-color: #dcdde1; -fx-border-radius: 10;" />
+                  
+                  <Label text="Şifre" style="-fx-font-weight: bold;" textFill="#34495e" />
+                  <PasswordField fx:id="txtSifre" prefHeight="40.0" promptText="••••••••" style="-fx-background-radius: 10; -fx-border-color: #dcdde1; -fx-border-radius: 10;" />
+               </children>
+            </VBox>
+
+            <Button fx:id="btnGiris" mnemonicParsing="false" onAction="#handleGiris" prefHeight="45.0" prefWidth="270.0" style="-fx-background-color: #2980b9; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10; -fx-cursor: hand;" text="GİRİŞ YAP">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            
+            <Label text="© 2026 Mağaza Yönetim Sistemi" textFill="#bdc3c7">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

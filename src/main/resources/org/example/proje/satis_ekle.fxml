@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="450.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.proje.SatisEkleController">
+   <children>
+      <VBox layoutX="35.0" layoutY="25.0" prefWidth="380.0" spacing="15.0">
+         <children>
+            <Label text="Yeni Satış İşlemi" textFill="#2980b9">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            
+            <VBox spacing="5.0">
+               <children>
+                  <Label text="Müşteri Seçimi" style="-fx-font-weight: bold;" />
+                  <ComboBox fx:id="cmbMusteri" prefHeight="35.0" prefWidth="380.0" promptText="Müşteri seçiniz..." style="-fx-background-radius: 8;" />
+               </children>
+            </VBox>
+
+            <VBox spacing="5.0">
+               <children>
+                  <Label text="Ürün Seçimi" style="-fx-font-weight: bold;" />
+                  <ComboBox fx:id="cmbUrun" prefHeight="35.0" prefWidth="380.0" promptText="Ürün seçiniz..." style="-fx-background-radius: 8;" />
+               </children>
+            </VBox>
+
+            <HBox spacing="15.0">
+               <children>
+                  <VBox prefWidth="182.5" spacing="5.0">
+                     <children>
+                        <Label text="İşlem ID" style="-fx-font-weight: bold;" />
+                        <TextField fx:id="txtIslemId" editable="false" prefHeight="35.0" style="-fx-background-color: #f1f2f6; -fx-background-radius: 8;" />
+                     </children>
+                  </VBox>
+                  <VBox prefWidth="182.5" spacing="5.0">
+                     <children>
+                        <Label text="Adet / Miktar" style="-fx-font-weight: bold;" />
+                        <TextField fx:id="txtAdet" prefHeight="35.0" promptText="0" style="-fx-background-radius: 8;" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+
+            <VBox spacing="5.0">
+               <children>
+                  <Label text="Birim Fiyat (TL)" style="-fx-font-weight: bold;" />
+                  <TextField fx:id="txtBirimFiyat" prefHeight="35.0" promptText="0.00" style="-fx-background-radius: 8;" />
+               </children>
+            </VBox>
+
+            <VBox prefHeight="70.0" prefWidth="380.0" style="-fx-background-color: #ecf0f1; -fx-background-radius: 10; -fx-padding: 10;">
+               <children>
+                  <Label text="TOPLAM TUTAR" style="-fx-font-size: 11px; -fx-font-weight: bold;" textFill="#7f8c8d" />
+                  <TextField fx:id="txtToplamTutar" editable="false" style="-fx-background-color: transparent; -fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;" text="0.00 TL" />
+               </children>
+            </VBox>
+
+            <HBox alignment="CENTER_RIGHT" spacing="15.0">
+               <children>
+                  <Button onAction="#handleIptal" prefHeight="45.0" prefWidth="120.0" style="-fx-background-color: #bdc3c7; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10;" text="İPTAL" />
+                  <Button onAction="#handleSatisKaydet" prefHeight="45.0" prefWidth="180.0" style="-fx-background-color: #2980b9; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10;" text="SATIŞI TAMAMLA" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

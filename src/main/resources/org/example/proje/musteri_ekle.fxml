@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="450.0" prefWidth="400.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.proje.MusteriEkleController">
+   <children>
+      <VBox layoutX="30.0" layoutY="20.0" prefWidth="340.0" spacing="15.0">
+         <children>
+            <Label text="Yeni Müşteri Kaydı" textFill="#2980b9">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            
+            <VBox spacing="5.0">
+               <children>
+                  <Label text="Müşteri ID" />
+                  <TextField fx:id="txtMusteriID" editable="false" prefHeight="35.0" style="-fx-background-color: #f1f2f6; -fx-background-radius: 8;" />
+               </children>
+            </VBox>
+
+            <VBox spacing="5.0">
+               <children>
+                  <Label text="Ad Soyad" />
+                  <TextField fx:id="txtAdSoyad" prefHeight="35.0" promptText="Müşterinin adı ve soyadı" style="-fx-background-radius: 8;" />
+               </children>
+            </VBox>
+
+            <VBox spacing="5.0">
+               <children>
+                  <Label text="Telefon" />
+                  <TextField fx:id="txtTelefon" prefHeight="35.0" promptText="05xx xxx xx xx" style="-fx-background-radius: 8;" />
+               </children>
+            </VBox>
+
+            <VBox spacing="5.0">
+               <children>
+                  <Label text="E-posta" />
+                  <TextField fx:id="txtEposta" prefHeight="35.0" promptText="örnek@mail.com" style="-fx-background-radius: 8;" />
+               </children>
+            </VBox>
+
+            <VBox spacing="5.0">
+               <children>
+                  <Label text="Adres" />
+                  <TextArea fx:id="txtAdres" prefHeight="80.0" promptText="Açık adres giriniz..." style="-fx-background-radius: 8;" wrapText="true" />
+               </children>
+            </VBox>
+
+            <VBox alignment="CENTER" spacing="10.0">
+               <children>
+                  <Button maxWidth="1.7976931348623157E308" onAction="#handleKaydet" prefHeight="40.0" style="-fx-background-color: #27ae60; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10;" text="MÜŞTERİYİ KAYDET" />
+                  <Button maxWidth="1.7976931348623157E308" onAction="#handleIptal" prefHeight="35.0" style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10;" text="İPTAL" />
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
